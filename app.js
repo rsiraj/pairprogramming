@@ -35,13 +35,21 @@ let input = prompt("Enter a letter");
 //let output = vowelCheck();
 vowelCheck(input);
 function vowelCheck (input){
-    for(let i = 0; i < vowels.length; i++){
-        if(input == vowels[i]){
-            console.log("This is a vowel");
-        }
-        else{
-            console.log("This is not a vowel");
-        }
+    if(input == "a" || input == "e" || input == "i" || input == "o" || input == "u"){
+        console.log("This is a vowel");
 
     }
+    else{
+        console.log("This is not a vowel");
+    }
+
+    // for(let i = 0; i < vowels.length; i++){
+    //     if(input == vowels[i]){
+    //         console.log("This is a vowel");
+    //     }
+    //     else{
+    //         console.log("This is not a vowel");
+    //     }
+
+    // }
 }
