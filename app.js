@@ -28,3 +28,20 @@ function primePrint(numArray){
 }
 
 // MEDIUM 1
+let vowels = ["a", "e", "i", "o", "u"];
+
+let input = prompt("Enter a letter");
+
+//let output = vowelCheck();
+vowelCheck(input);
+function vowelCheck (input){
+    for(let i = 0; i < vowels.length; i++){
+        if(input == vowels[i]){
+            console.log("This is a vowel");
+        }
+        else{
+            console.log("This is not a vowel");
+        }
+
+    }
+}
