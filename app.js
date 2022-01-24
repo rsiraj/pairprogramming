@@ -53,3 +53,34 @@ function vowelCheck (input){
 
     // }
 }
+
+// MEDIUM 2
+function anagramCheck (string1, string2) {
+    string1 = string1.replace(/\s+/g, '');
+    string2 = string2.replace(/\s+/g, '');
+
+    string1 = string1.toLowerCase();
+    string2 = string2.toLowerCase();
+
+    let stringArray1 = Array.from(string1);
+    let stringArray2 = Array.from(string2);
+
+    stringArray1 = stringArray1.sort();
+    stringArray2 = stringArray2.sort();
+
+    console.log(stringArray1);
+    console.log(stringArray2);
+
+    for (let i = 0; i < stringArray1.length; i++){
+        if (stringArray1[i] != stringArray2[i]){
+            return false;
+        }
+    }
+    return true;
+}
+
+let string1 = "So dark the con of man";
+let string2 = "Madonna of the Rocks";
+
+
+console.log(anagramCheck(string1, string2));
