@@ -84,3 +84,21 @@ let string2 = "Madonna of the Rocks";
 
 
 console.log(anagramCheck(string1, string2));
+
+//MEDIUM 3 
+
+function gcd(num1, num2) {
+    
+    while(num2) { // 126 78 48 30 18 12 6 0
+       x = num2;
+      //console.log(x); 126 78 48 30 18 12 6
+      num2 = num1 % num2;
+      //console.log(num2); 78 48 30 18 12 6 0
+      num1 = x;
+      //console.log(num1);126 78 48 30 18 12 6
+    }
+    return x;
+  }
+  
+  console.log(gcd(78, 126));
+  console.log(gcd(336, 360));
