@@ -90,15 +90,15 @@ console.log(anagramCheck(string1, string2));
 function gcd(num1, num2) {
     
     while(num2) { // 126 78 48 30 18 12 6 0
-       x = num2;
+        x = num2;
       //console.log(x); 126 78 48 30 18 12 6
-      num2 = num1 % num2;
+        num2 = num1 % num2;
       //console.log(num2); 78 48 30 18 12 6 0
-      num1 = x;
+        num1 = x;
       //console.log(num1);126 78 48 30 18 12 6
     }
     return x;
-  }
-  
-  console.log(gcd(78, 126));
-  console.log(gcd(336, 360));
+}
+
+console.log(gcd(78, 126));
+console.log(gcd(336, 360));
