@@ -16,32 +16,24 @@ function oddPrint(array){
 }
 
 // EASY 2
-// let numArray = [1,2,3,4,5,6,7,8,9,10];
-// const prime = numArray.filter(primePrint);
+let numArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,103];
+const prime = numArray.filter(primePrint);
 
-// console.log(prime)
+console.log(prime)
 
-// function primePrint(numArray){
-//     for (let i = 2; i < numArray; i++ ){
-//         if (numArray % i != 0) {return numArray;}
-//     }
-// }
+function primePrint(numArray){
+    for (let i = 2; numArray > i; i++ ){
+        if (numArray % i == 0) {
+            return false;
+        }
+        
+    }
+    return numArray;
+}
 
-// const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-
-// function isPrime(num) {
-//     for (let i = 2; num > i; i++) {
-//         if (num % i == 0) {
-//             return false;
-//         }
-//     }
-//     return num > 1;
-// }
-
-// console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 
 // MEDIUM 1
-let vowels = ["a", "e", "i", "o", "u"];
+
 
 let input = prompt("Enter a letter");
 
@@ -55,7 +47,7 @@ function vowelCheck (input){
     else{
         console.log("This is not a vowel");
     }
-
+    // let vowels = ["a", "e", "i", "o", "u"];
     // for(let i = 0; i < vowels.length; i++){
     //     if(input == vowels[i]){
     //         console.log("This is a vowel");
@@ -80,9 +72,6 @@ function anagramCheck (string1, string2) {
 
     stringArray1 = stringArray1.sort();
     stringArray2 = stringArray2.sort();
-
-    console.log(stringArray1);
-    console.log(stringArray2);
 
     for (let i = 0; i < stringArray1.length; i++){
         if (stringArray1[i] != stringArray2[i]){
@@ -142,3 +131,16 @@ Car.driveAroundTheWorld();
 Car.runErrands();
 
 // HARD 1
+function brackets(str){
+    if(str === "{}" || str === "[]" || str === "()"){
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
+str = "{hello world}";
+str = str.replace(/[a-z]/g,"");
+str = str.replace(/\s+/g, '');
+console.log(brackets(str));
