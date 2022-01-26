@@ -16,29 +16,29 @@ function oddPrint(array){
 }
 
 // EASY 2
-let numArray = [1,2,3,4,5,6,7,8,9,10];
-const prime = numArray.filter(primePrint);
+// let numArray = [1,2,3,4,5,6,7,8,9,10];
+// const prime = numArray.filter(primePrint);
 
-console.log(prime)
+// console.log(prime)
 
-function primePrint(numArray){
-    for (let i = 2; i < numArray; i++ ){
-        if (numArray % i != 0) {return numArray;}
-    }
-}
+// function primePrint(numArray){
+//     for (let i = 2; i < numArray; i++ ){
+//         if (numArray % i != 0) {return numArray;}
+//     }
+// }
 
-const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+// const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
-function isPrime(num) {
-    for (let i = 2; num > i; i++) {
-        if (num % i == 0) {
-            return false;
-        }
-    }
-    return num > 1;
-}
+// function isPrime(num) {
+//     for (let i = 2; num > i; i++) {
+//         if (num % i == 0) {
+//             return false;
+//         }
+//     }
+//     return num > 1;
+// }
 
-console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
+// console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 
 // MEDIUM 1
 let vowels = ["a", "e", "i", "o", "u"];
@@ -98,8 +98,7 @@ let string2 = "Madonna of the Rocks";
 
 console.log(anagramCheck(string1, string2));
 
-//MEDIUM 3 
-
+// MEDIUM 3 
 function gcd(num1, num2) {
     
     while(num2) { // 126 78 48 30 18 12 6 0
@@ -116,4 +115,30 @@ function gcd(num1, num2) {
 console.log(gcd(78, 126));
 console.log(gcd(336, 360));
 
-//
+// MEDIUM 4
+let Car = {
+    make: "Honda",
+    model: "Accord",
+    year: 2020,
+    mileage: 10000,
+    color: "red",
+
+    driveToWork: () => {
+        Car.mileage += 33;
+        console.log(`You started with ${Car.mileage-33} miles and drove to work. New mileage: ${Car.mileage}.`)
+    },
+    driveAroundTheWorld: () => {
+        Car.mileage += 24000;
+        console.log(`You started with ${Car.mileage-24000} miles and drove around the world. New mileage: ${Car.mileage}.`)
+    },
+    runErrands: () => {
+        Car.mileage += 30;
+        console.log(`You started with ${Car.mileage-30} miles and ran errands. New mileage: ${Car.mileage}.`)
+    },
+}
+
+Car.driveToWork();
+Car.driveAroundTheWorld();
+Car.runErrands();
+
+// HARD 1
