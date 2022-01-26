@@ -140,7 +140,7 @@ function brackets(str){
     }
 
 }
-str = "{hello world}";
-str = str.replace(/[a-z]/g,"");
+str = "(hello world)";
+str = str.replace(/[a-z]/gi,"");
 str = str.replace(/\s+/g, '');
 console.log(brackets(str));
