@@ -132,8 +132,9 @@ Car.runErrands();
 
 // HARD 1
 function brackets(str){
-    str = str.replace(/[a-z]/gi,"");
-    str = str.replace(/\s+/g, '');
+    // str = str.replace(/[a-z]/gi,"");
+    // str = str.replace(/\s+/g, ''); dont need line 135 and 136 anymore as the general expression on line 137 gets rid of everything except the brackets we need
+    str = str.replace(/[^{}()[\]]+/g, "");
     if(str === "{}" || str === "[]" || str === "()"){
         return true;
     }
@@ -142,5 +143,5 @@ function brackets(str){
     }
 
 }
-str = "{Hello .world}";
+str = "[Hello .world]";
 console.log(brackets(str));
