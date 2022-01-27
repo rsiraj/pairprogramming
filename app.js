@@ -1,4 +1,3 @@
-
 // EASY 1
 let array = [2, 4, 7, 11, 15, 16];
 const even = array.filter(evenPrint);
@@ -14,6 +13,7 @@ function evenPrint(array){
 function oddPrint(array){
     return array % 2 != 0;
 }
+
 
 // EASY 2
 let numArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,103];
@@ -33,8 +33,6 @@ function primePrint(numArray){
 
 
 // MEDIUM 1
-
-
 let input = prompt("Enter a letter");
 
 //let output = vowelCheck();
@@ -55,9 +53,9 @@ function vowelCheck (input){
     //     else{
     //         console.log("This is not a vowel");
     //     }
-
     // }
 }
+
 
 // MEDIUM 2
 function anagramCheck (string1, string2) {
@@ -84,14 +82,13 @@ function anagramCheck (string1, string2) {
 }
 
 let string1 = "So dark the con of man";
-let string2 = "Madonna of the Rocks";
-
+let string2 = "Madonna of the Rocks.";
 
 console.log(anagramCheck(string1, string2));
 
+
 // MEDIUM 3 
 function gcd(num1, num2) {
-    
     while(num2) { // 126 78 48 30 18 12 6 0
         x = num2;
       //console.log(x); 126 78 48 30 18 12 6
@@ -105,6 +102,7 @@ function gcd(num1, num2) {
 
 console.log(gcd(78, 126));
 console.log(gcd(336, 360));
+
 
 // MEDIUM 4
 let Car = {
@@ -132,6 +130,7 @@ Car.driveToWork();
 Car.driveAroundTheWorld();
 Car.runErrands();
 
+
 // HARD 1
 function brackets(str){
     // str = str.replace(/[a-z]/gi,"");
@@ -143,7 +142,7 @@ function brackets(str){
     else{
         return false;
     }
-
 }
+
 str = "[Hello .world]";
 console.log(brackets(str));
