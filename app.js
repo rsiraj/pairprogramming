@@ -61,8 +61,10 @@ function vowelCheck (input){
 
 // MEDIUM 2
 function anagramCheck (string1, string2) {
-    string1 = string1.replace(/\s+/g, '');
-    string2 = string2.replace(/\s+/g, '');
+    // string1 = string1.replace(/\s+/g, '');
+    // string2 = string2.replace(/\s+/g, ''); // dont need to replace all spaces anymore as next 2 lines get rid of everything that isnt a letter
+    string1 = string1.replace(/[^a-z]+/gi, "");
+    string2 = string2.replace(/[^a-z]+/gi, "");
 
     string1 = string1.toLowerCase();
     string2 = string2.toLowerCase();
