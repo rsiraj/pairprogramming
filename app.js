@@ -132,7 +132,7 @@ Car.runErrands();
 
 // HARD 1
 function brackets(str){
-    str = str.replace(/[a-z]/g,"");
+    str = str.replace(/[a-z]/gi,"");
     str = str.replace(/\s+/g, '');
     if(str === "{}" || str === "[]" || str === "()"){
         return true;
@@ -142,5 +142,5 @@ function brackets(str){
     }
 
 }
-str = "{hello world}";
+str = "{Hello .world}";
 console.log(brackets(str));
