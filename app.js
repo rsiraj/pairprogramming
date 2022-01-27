@@ -133,7 +133,7 @@ Car.runErrands();
 // HARD 1
 function brackets(str){
     str = str.replace(/[a-z]/g,"");
-str = str.replace(/\s+/g, '');
+    str = str.replace(/\s+/g, '');
     if(str === "{}" || str === "[]" || str === "()"){
         return true;
     }
